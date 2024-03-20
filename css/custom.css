@@ -1,0 +1,115 @@
+.dis-none {
+    display: none;
+}
+html {
+ font-family: Arial, Helvetica, sans-serif;
+/* font-size: 14px;*/
+}
+
+.modal.fade.zoom:not(.show) .modal-dialog {
+    transform: scale(0.8);
+}
+
+#example {
+    width: 100% !important;
+}
+
+.grey-textbox {
+    color: grey !important;
+    background: #edebeb !important;
+    border: none;
+    box-shadow: none;
+}
+
+.grey-textbox:hover {
+    box-shadow: none;
+    background: none;
+    border: none;
+}
+
+.card-bg {
+    background: #f4f4f4;
+}
+
+/*.sidebar-bg {
+    background: #425b78 !important;
+}*/
+
+.sidebar-item.active {
+    background: blueviolet !important;
+}
+
+.brand-title {
+    max-width: 75px;
+}
+
+.logo-abbr {
+    max-width: 30px;
+}
+
+.page-head {
+    color: blueviolet;
+}
+
+nav {
+    position: sticky !important;
+    top: 0 !important;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+.loader::before,
+.loader::after {    
+  content:"";
+  grid-area: 1/1;
+  --c:no-repeat radial-gradient(farthest-side,blueviolet 92%,#0000);
+  background: 
+    var(--c) 50%  0, 
+    var(--c) 50%  100%, 
+    var(--c) 100% 50%, 
+    var(--c) 0    50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes l12 { 
+  100%{transform: rotate(.5turn)}
+}
+
+#preloader
+{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255 , 0.9);
+    z-index: 9999;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+:invalid:required { 
+    color: red; 
+}
